@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Decript</title>
+    <script src="decrypt.js" defer></script>
+</head>
+<body>
+    <header></header>
+<main>
+    <section class="cripitografe" style="font-weight: bold;">
+        <img class="logo" src="img/logo ai.png">
+        <div class="texto__h2">
+            <h2 class="texto__aqui">Seu texto aqui</h2>
+        </div>
+        <div class="container">
+            <div class="textarea__container">
+                <textarea id="textarea"></textarea>
+                <div class="aviso">
+                    <p class="aviso__texto">Aviso: somente em letras minúsculas e sem acento</p>
+                </div>
+                <div class="buttons">
+                    <button onclick="encrypt()" class="enc__but">Criptografar</button>
+                    <button onclick="decrypt()" class="enc__dec">Descriptografar</button>           
+                </div>
+            </div>
+            <div id="resultBox">
+                <img id="imagemResult" src="img/robo-with-bg redu.png" class="imagemResult">
+                <p id="result"></p>
+                <button class="buttonCopy" type="button" onclick="copyResult()">Copiar</button>
+            </div>
+        </div>
+    </section>
+    <img>
+</main>
+<foot class="rodape">Developed by Rômulo Bastos</foot>
+</body>
+</html>

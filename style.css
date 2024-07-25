@@ -1,0 +1,279 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap);
+
+:root{
+    --cor--background: #c7cfee;
+    --cor-caixa-textoAqui:#AFAFAF;
+    --cor--caixa-resultado:white;
+    --cor--caixaBotao:#0A3871;
+    --corTexto--caixa-textoAqui: #0A3871;
+    --corTexto--result: #495057;
+}
+
+body{
+    background: var(--cor--background);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    opacity: 90%;
+    overflow-x: hidden;
+    justify-content: flex-start;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+    flex-grow: 1;
+    padding: 0; /* Remove o padding */
+    box-sizing: border-box;
+}
+
+.cripitografe {
+    padding: 0.625rem 0.625rem 3.75rem 0.625rem;
+    width: 100%;
+    gap: 82px;
+}
+
+.logo{
+    position: absolute;
+    width: 6.25rem;
+    display: block;
+    margin:  0 1.25rem 1.25rem;
+}
+
+.texto__h2{
+    margin-bottom: 1.25rem;
+}
+
+.texto__aqui{
+    
+    border-radius: 0.3125rem;
+    padding: 0.625rem;
+    font-family: 'Inter';
+    font-size: 2rem;
+    margin: 7.875rem 32.5rem 50.5rem 15rem;
+    position: absolute
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 2.5rem;
+    margin-right: 2.5rem;
+    margin-bottom: 2.5rem;
+    margin-left: 0px;
+
+}
+
+.textarea__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 0px;
+}
+
+.enc__but{
+    background-color: var(--cor--caixaBotao);
+    width: 20.5rem;
+    height: 4.1875rem;
+    border-radius: 2rem;
+    color: white;
+    font-family: 'Inter';
+    font-size: 1rem;
+    transition: var(--cor--background) 0.3s ease;
+}
+
+.enc__dec{
+    background-color: var(--cor--background);
+    width: 20.5rem;
+    height: 4.1875rem;
+    border-radius: 2rem;
+    border-color: var(--cor--caixaBotao);
+    color: var(--corTexto--caixa-textoAqui);
+    font-family: 'Inter';
+    font-size: 1rem;
+    transition: gray 0.3s ease;
+}
+
+.enc__but:hover {
+   background-color: gray; 
+}
+
+.enc__dec:hover {
+    background-color: gray; 
+}
+
+textarea{
+    background-color: var(--cor--background);
+    width: 55.125rem;
+    height: 36.375rem;
+    resize: none;
+    border: none;
+    margin: 11.785rem 0 0.625rem 4.8125rem;
+    position: relative;
+    font-family: 'Inter';
+    font-size: 1.5rem;
+    font-weight: 37.5rem;
+    text-align: justify;
+    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+    color: var(--corTexto--caixa-textoAqui);
+}
+
+#resultBox{
+    display: flex;
+    width: 31.25rem;
+    height: 61,25rem;
+    margin: 0 15.625rem 2.5rem 2.5rem;
+    border-width: 0.15625rem;
+    border-radius: 0.9375rem;
+}
+
+#resultBox p{
+    border-radius: 2rem 2rem 0 0;
+    box-shadow: 0 0.5rem 1rem 0.625rem rgba(0,0,0,0.2), 0 0px 0px 0 rgba(0,0,0,0.19);
+    background-color: var(--cor--caixa-resultado);
+    color: var(--cor--caixa-resultado);
+    width: 400px;
+    height: 800px;
+    word-wrap: break-word;
+    color: black;
+    font-size: 1.5rem;
+    padding: 1.875rem 1.875rem 1.875rem 1.875rem;
+    font-family: 'Inter';
+    overflow: auto;
+    max-height: 49,1875rem;
+}
+
+#resultBox .buttonCopy{
+    width: 28.75rem;
+    height: 4.1875rem;
+    border-radius: 0 0 2rem 2rem;
+    background-color: var(--cor--caixa-resultado);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 54.0625rem 0 0 0;
+    position: absolute;
+    font-family: 'Inter';
+    color: var(--corTexto--caixa-textoAqui);
+    font-size: 16px;
+    transition: gray 0.3s ease;
+}
+
+#resultBox .buttonCopy:hover{
+    background-color: gray;
+}
+
+.aviso{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Inter';
+    color: var(--corTexto--result);
+}
+
+.rodape{
+    position: absolute;
+    width: 100%;
+    height: 2.5rem;
+    background-color: var(--cor--caixaBotao);
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    font-family: 'Inter';
+    font-size: 1.5625rem;
+    color: var(--cor--caixa-resultado);
+}
+
+.imagemResult {
+    width: 34.375rem;
+    height: auto;
+    margin: auto;
+    display: block;
+    z-index: 2;
+}
+
+@media (max-width: 768px){
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container{
+        flex-direction: column-reverse;
+    }
+
+    .logo{
+        margin: 0 0 30px 5px;
+    }
+
+    #resultBox {
+        width: auto;
+        height: auto; /* Ajusta a altura automaticamente */
+        padding: 30px;
+        margin: 0 auto 30px;
+        box-sizing: border-box;
+    }
+
+    #resultBox p{
+        width: 280px;
+        height: 252px;
+    }
+
+    #resultBox .buttonCopy {
+        width: 340px;
+        height: 40px; 
+        margin: 335px 800px 0 0;
+    }
+    .imagemResult{
+       width: 340px;
+       height: 400px;
+       z-index: 1;
+       margin-top: 50px;
+    }
+    
+    .texto__aqui{
+        font-size: 1rem;
+        margin: 510px 90px 0 0;
+        flex-direction: row;
+        padding-left: 20px;
+        z-index: 3;
+    }
+
+    textarea{
+        width: 289px;
+        height: 150px;
+        margin: 52px 0 0 20px ;
+        z-index: 3;
+    }
+
+    .aviso{
+        font-size: 1rem;
+        margin: 0 90px;
+        z-index: 3;
+    }
+
+    .buttons{
+        flex-direction: column;
+        align-items: center;
+        z-index: 3;
+    }
+
+    .enc__but, .enc__dec{
+        width: 100%;
+        z-index: 3;
+    }
+
+    .rodape{
+        z-index: 3;
+    }
+}
